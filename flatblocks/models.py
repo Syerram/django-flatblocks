@@ -1,10 +1,8 @@
 
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
 
-@python_2_unicode_compatible
 class FlatBlock(models.Model):
     """
     Think of a flatblock as a flatpage but for just part of a site. It's
@@ -24,7 +22,7 @@ class FlatBlock(models.Model):
     raw_content = None
     raw_header = None
 
-    def __str__(self):
+    def __unicode__(self):
         return self.slug
 
     class Meta:
